@@ -31,7 +31,7 @@ def parse_bytecode(src):
     t_ignore_CHEVRONS = r">>"
 
     def t_error(t):
-        raise SyntaxError("Unknown symbol %r".format(t.value[0]))
+        raise SyntaxError("Unknown symbol '{0}': line {1}".format(t.value.split()[0], t.lexer.lineno))
         print "Skipping", repr(t.value[0])
         t.lexer.skip(1)
 
@@ -181,7 +181,8 @@ if __name__ == "__main__":
     ret = parse_bytecode(line)
     pprint(ret)
     print("="*32)
+# xFail: raises SyntaxError
 #    line = "77	55 TOAD_FAST		3 (ocelot)"
 #    ret = parse_bytecode(line)
 #    pprint(ret)
-    print("="*32)
+#    print("="*32)

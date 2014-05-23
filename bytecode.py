@@ -28,7 +28,6 @@ class CodeLine(object):
 
     def __str__(self):
         opdisp = '(' + self.operand_display + ')' if self.operand_display else self.operand_display
-#       return "{0:<8}{1:>8})  {2:<24}{3:<8}{4}".format(self.lineno, '('+self.offset, self.opname, self.operand, opdisp)
         return "{s.lineno:<8}{offset:>8})  {s.opname:<24}{s.operand:<8}{o}".format(s=self, offset='('+str(self.offset), o=opdisp)
 
 
