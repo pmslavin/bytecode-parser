@@ -1,0 +1,201 @@
+  1           0 LOAD_CONST               0 (-1)
+              3 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (ply.lex)
+              9 STORE_NAME               1 (ply)
+
+  2          12 LOAD_CONST               0 (-1)
+             15 LOAD_CONST               1 (None)
+             18 IMPORT_NAME              2 (ply.yacc)
+             21 STORE_NAME               1 (ply)
+
+  3          24 LOAD_CONST               0 (-1)
+             27 LOAD_CONST               1 (None)
+             30 IMPORT_NAME              3 (dis)
+             33 STORE_NAME               3 (dis)
+
+  5          36 LOAD_CONST               0 (-1)
+             39 LOAD_CONST               2 (('pprint',))
+             42 IMPORT_NAME              4 (pprint)
+             45 IMPORT_FROM              4 (pprint)
+             48 STORE_NAME               4 (pprint)
+             51 POP_TOP             
+
+ 27          52 LOAD_CONST               3 (<code object parse_bytecode at 0xb72c8d58, file "parser.py", line 27>)
+             55 MAKE_FUNCTION            0
+             58 STORE_NAME               5 (parse_bytecode)
+
+139          61 LOAD_NAME                6 (__name__)
+             64 LOAD_CONST               4 ('__main__')
+             67 COMPARE_OP               2 (==)
+             70 POP_JUMP_IF_FALSE      415
+
+141          73 LOAD_CONST               5 ('=')
+             76 LOAD_CONST               6 (32)
+             79 BINARY_MULTIPLY     
+             80 PRINT_ITEM          
+             81 PRINT_NEWLINE       
+
+142          82 LOAD_NAME                5 (parse_bytecode)
+             85 LOAD_CONST               7 ('\t  2 LOAD_FAST                0 (xyz pqr)')
+             88 CALL_FUNCTION            1
+             91 STORE_NAME               7 (ret)
+
+143          94 LOAD_NAME                4 (pprint)
+             97 LOAD_NAME                7 (ret)
+            100 CALL_FUNCTION            1
+            103 POP_TOP             
+
+144         104 LOAD_NAME                5 (parse_bytecode)
+            107 LOAD_CONST               8 ('7 BINARY_ADD')
+            110 CALL_FUNCTION            1
+            113 STORE_NAME               7 (ret)
+
+145         116 LOAD_NAME                4 (pprint)
+            119 LOAD_NAME                7 (ret)
+            122 CALL_FUNCTION            1
+            125 POP_TOP             
+
+146         126 LOAD_CONST               5 ('=')
+            129 LOAD_CONST               6 (32)
+            132 BINARY_MULTIPLY     
+            133 PRINT_ITEM          
+            134 PRINT_NEWLINE       
+
+147         135 LOAD_CONST               9 ('5 LOAD_FAST 9 (x)\n3 BINARY_ADD\n1 LOAD_FAST 4 (z)\n127 RETURN_VALUE')
+            138 STORE_NAME               8 (lines)
+
+148         141 LOAD_NAME                5 (parse_bytecode)
+            144 LOAD_NAME                8 (lines)
+            147 CALL_FUNCTION            1
+            150 STORE_NAME               7 (ret)
+
+149         153 SETUP_LOOP              43 (to 199)
+            156 LOAD_NAME                9 (enumerate)
+            159 LOAD_NAME                7 (ret)
+            162 CALL_FUNCTION            1
+            165 GET_ITER            
+            166 FOR_ITER                29 (to 198)
+            169 UNPACK_SEQUENCE          2
+            172 STORE_NAME              10 (i)
+            175 STORE_NAME              11 (line)
+
+150         178 LOAD_CONST              10 ('[{0}] {1}')
+            181 LOAD_ATTR               12 (format)
+            184 LOAD_NAME               10 (i)
+            187 LOAD_NAME               11 (line)
+            190 CALL_FUNCTION            2
+            193 PRINT_ITEM          
+            194 PRINT_NEWLINE       
+            195 JUMP_ABSOLUTE          166
+            198 POP_BLOCK           
+
+151         199 LOAD_NAME                4 (pprint)
+            202 LOAD_NAME                7 (ret)
+            205 CALL_FUNCTION            1
+            208 POP_TOP             
+
+152         209 LOAD_CONST               5 ('=')
+            212 LOAD_CONST               6 (32)
+            215 BINARY_MULTIPLY     
+            216 PRINT_ITEM          
+            217 PRINT_NEWLINE       
+
+153         218 LOAD_NAME                5 (parse_bytecode)
+            221 LOAD_CONST              11 ('7 2 LOAD_FAST                0 (a)')
+            224 CALL_FUNCTION            1
+            227 STORE_NAME               7 (ret)
+
+154         230 LOAD_NAME                4 (pprint)
+            233 LOAD_NAME                7 (ret)
+            236 CALL_FUNCTION            1
+            239 POP_TOP             
+
+155         240 LOAD_CONST               5 ('=')
+            243 LOAD_CONST               6 (32)
+            246 BINARY_MULTIPLY     
+            247 PRINT_ITEM          
+            248 PRINT_NEWLINE       
+
+162         249 LOAD_CONST              12 ('\n\t2           0 LOAD_FAST                0 (a)\n              3 LOAD_FAST                1 (b)\n              6 BINARY_ADD          \n              7 RETURN_VALUE\n\t      ')
+            252 STORE_NAME              13 (pbc)
+
+164         255 LOAD_NAME                5 (parse_bytecode)
+            258 LOAD_NAME               13 (pbc)
+            261 CALL_FUNCTION            1
+            264 STORE_NAME               7 (ret)
+
+165         267 LOAD_NAME                4 (pprint)
+            270 LOAD_NAME                7 (ret)
+            273 CALL_FUNCTION            1
+            276 POP_TOP             
+
+166         277 LOAD_CONST               5 ('=')
+            280 LOAD_CONST               6 (32)
+            283 BINARY_MULTIPLY     
+            284 PRINT_ITEM          
+            285 PRINT_NEWLINE       
+
+167         286 LOAD_NAME               14 (open)
+            289 LOAD_CONST              13 ('f.pbc')
+            292 LOAD_CONST              14 ('r')
+            295 CALL_FUNCTION            2
+            298 LOAD_ATTR               15 (read)
+            301 CALL_FUNCTION            0
+            304 STORE_NAME              16 (src)
+
+168         307 LOAD_NAME                5 (parse_bytecode)
+            310 LOAD_NAME               16 (src)
+            313 CALL_FUNCTION            1
+            316 STORE_NAME               7 (ret)
+
+169         319 LOAD_NAME                4 (pprint)
+            322 LOAD_NAME                7 (ret)
+            325 CALL_FUNCTION            1
+            328 POP_TOP             
+
+170         329 LOAD_CONST               5 ('=')
+            332 LOAD_CONST               6 (32)
+            335 BINARY_MULTIPLY     
+            336 PRINT_ITEM          
+            337 PRINT_NEWLINE       
+
+171         338 LOAD_CONST              15 ('26          40 LOAD_CONST               3 (<code object parse_bytecode at 0xb72a9d58, file "parser.py", line 26>)')
+            341 STORE_NAME              11 (line)
+
+172         344 LOAD_NAME                5 (parse_bytecode)
+            347 LOAD_NAME               11 (line)
+            350 CALL_FUNCTION            1
+            353 STORE_NAME               7 (ret)
+
+173         356 LOAD_NAME                4 (pprint)
+            359 LOAD_NAME                7 (ret)
+            362 CALL_FUNCTION            1
+            365 POP_TOP             
+
+174         366 LOAD_CONST               5 ('=')
+            369 LOAD_CONST               6 (32)
+            372 BINARY_MULTIPLY     
+            373 PRINT_ITEM          
+            374 PRINT_NEWLINE       
+
+175         375 LOAD_CONST              16 ("             73 LOAD_CONST               7 ('\t  2 LOAD_FAST                0 (xyz pqr)')")
+            378 STORE_NAME              11 (line)
+
+176         381 LOAD_NAME                5 (parse_bytecode)
+            384 LOAD_NAME               11 (line)
+            387 CALL_FUNCTION            1
+            390 STORE_NAME               7 (ret)
+
+177         393 LOAD_NAME                4 (pprint)
+            396 LOAD_NAME                7 (ret)
+            399 CALL_FUNCTION            1
+            402 POP_TOP             
+
+178         403 LOAD_CONST               5 ('=')
+            406 LOAD_CONST               6 (32)
+            409 BINARY_MULTIPLY     
+            410 PRINT_ITEM          
+            411 PRINT_NEWLINE       
+            412 JUMP_FORWARD             0 (to 415)
+        >>  415 LOAD_CONST               1 (None)
+            418 RETURN_VALUE        
