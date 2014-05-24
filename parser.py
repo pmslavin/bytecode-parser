@@ -137,52 +137,13 @@ def parse_bytecode(src):
 
 
 if __name__ == "__main__":
-    """These become py.tests..."""
-
-    print("="*32)
-    ret = parse_bytecode("	  2 LOAD_FAST                0 (xyz pqr)")
-    pprint(ret)
-    ret = parse_bytecode("7 BINARY_ADD")
-    pprint(ret)
-    print("="*32)
-    lines = "5 LOAD_FAST 9 (x)\n3 BINARY_ADD\n1 LOAD_FAST 4 (z)\n127 RETURN_VALUE"
-    ret = parse_bytecode(lines)
-    for i, line in enumerate(ret):
-        print("[{0}] {1}".format(i, line))
-    pprint(ret)
-    print("="*32)
-    ret = parse_bytecode("7 2 LOAD_FAST                0 (a)")
-    pprint(ret)
-    print("="*32)
 
     pbc = """
     2           0 LOAD_FAST                0 (a)
-              3 LOAD_FAST                1 (b)
-              6 BINARY_ADD
-              7 RETURN_VALUE
+                3 LOAD_FAST                1 (b)
+                6 BINARY_ADD
+                7 RETURN_VALUE
     """
 
     ret = parse_bytecode(pbc)
     pprint(ret)
-    print("="*32)
-#    src = open("p.pbc", 'r').read()
-#    ret = parse_bytecode(src)
-#    pprint(ret)
-    print("="*32)
-    line = """26          40 LOAD_CONST               3 (<code object parse_bytecode at 0xb72a9d58, file "parser.py", line 26>)"""
-    ret = parse_bytecode(line)
-    pprint(ret)
-    print("="*32)
-    line = """             73 LOAD_CONST               7 ('\t  2 LOAD_FAST                0 (xyz pqr)')"""
-    ret = parse_bytecode(line)
-    pprint(ret)
-    print("="*32)
-    line = """2          >>  100 CALL_FUNCTION            1"""
-    ret = parse_bytecode(line)
-    pprint(ret)
-    print("="*32)
-# xFail: raises SyntaxError
-#    line = "77	55 TOAD_FAST		3 (ocelot)"
-#    ret = parse_bytecode(line)
-#    pprint(ret)
-#    print("="*32)
